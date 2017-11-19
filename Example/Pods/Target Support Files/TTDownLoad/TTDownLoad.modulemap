@@ -1,0 +1,6 @@
+framework module TTDownLoad {
+  umbrella header "TTDownLoad-umbrella.h"
+
+  export *
+  module * { export * }
+}
