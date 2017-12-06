@@ -3,10 +3,10 @@ use_frameworks!
 target 'TTDownLoad_Example' do
   pod 'TTDownLoad', :path => '../'
 
-  target 'TTDownLoad_Tests' do
-    inherit! :search_paths
-
-#    pod 'Kiwi'
-  pod 'FBSnapshotTestCase'
-  end
+#  target 'TTDownLoad_Tests' do
+#    inherit! :search_paths
+#
+##    pod 'Kiwi'
+#  pod 'FBSnapshotTestCase'
+#  end
 end

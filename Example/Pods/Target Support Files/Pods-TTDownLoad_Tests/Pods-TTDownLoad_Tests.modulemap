@@ -1,6 +1,0 @@
-framework module Pods_TTDownLoad_Tests {
-  umbrella header "Pods-TTDownLoad_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

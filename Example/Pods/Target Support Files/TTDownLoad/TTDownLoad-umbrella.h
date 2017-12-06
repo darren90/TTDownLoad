@@ -11,6 +11,7 @@
 #endif
 
 #import "TTDownloadDataManager.h"
+#import "TTDownloadDelegate.h"
 #import "TTDownloadModel.h"
 #import "TTListDownloadManager.h"
 #import "TTM3u8DownloadManager.h"

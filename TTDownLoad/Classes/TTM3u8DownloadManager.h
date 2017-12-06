@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TTDownloadModel.h"
 
 @interface TTM3u8DownloadManager : NSObject
 

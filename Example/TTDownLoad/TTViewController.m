@@ -7,6 +7,7 @@
 //
 
 #import "TTViewController.h"
+#import "TTDownloadDataManager.h"
 
 @interface TTViewController ()
 

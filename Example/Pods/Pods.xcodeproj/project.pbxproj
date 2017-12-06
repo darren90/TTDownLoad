@@ -7,44 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		051A816D6DD0CAE13496DDCFE0829167 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		094973D2D2F1E3B2E772F93C8147C6B9 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */; };
-		0F2B2D6EC565E5BE1211AD9063370765 /* TTDownLoad-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C57D6D9408D66C035F984D1D5FEEEC96 /* TTDownLoad-dummy.m */; };
-		140BC1FA43BCB5B94A13CA7D2C203370 /* Pods-TTDownLoad_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6CC5698A1BC9EF5273116A2685C11B /* Pods-TTDownLoad_Example-dummy.m */; };
-		1A0D3DC30DEC85EF75837E7F70CCF537 /* TTDownloadDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7012D42A05D36DA4AE84F874535E8CB7 /* TTDownloadDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1AB7934C16CE49DE196FFC7BE7278287 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */; };
-		1FA731F2147F63CDF52A67A1737A4E9F /* TTListDownloadManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FEC456BAE89DFC3294DB61A62BDCD62 /* TTListDownloadManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D37A734D238F224D488F6466E0578C7 /* TTDownLoad-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F05D4E98BFDA8BBA3162F5FA360206C /* TTDownLoad-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2F485B69F51E4F723A38410F31F08550 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */; };
-		3F221B159B04A95986BBD5AC4DCFE7E1 /* Pods-TTDownLoad_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B8C0D10DC8E5C0083BFCA92BF4E9515A /* Pods-TTDownLoad_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		421CDD701AEE0F2458A84200366CDD0F /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		506D761F91EC3583789A837C559972FE /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C18C0EB1FED5EB5CE3B0E768AC510F /* FBSnapshotTestCase-dummy.m */; };
-		57C7B3599F1C296C833E622C3A91C1CF /* TTDownloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A810A61DD0D39DB26889CAF5DC0CF0 /* TTDownloadModel.m */; };
-		5DB0221C838F934B927AC5427428E0D9 /* Pods-TTDownLoad_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7900AE1846894D70CD5E89993636E4 /* Pods-TTDownLoad_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */; };
-		756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */; };
-		772A231BC6F2B5DD80F7F89F09E38576 /* TTListDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE3506580AA9B90BCB92D58DCC1CE5 /* TTListDownloadManager.m */; };
-		7E9B14D5F8842A86CA86F2AF45230725 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8F339250A1C3C5C5C5364254007103 /* XCTest.framework */; };
-		83BD771083242B6F4061CFEC8AC4AF21 /* TTDownloadModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 38875F296386FE882F8DBBECFDFE7E5B /* TTDownloadModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		841FF232C33C7D49C58CEFDBE7EEB92B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA323C90663942983643D7A4D1F697C8 /* UIKit.framework */; };
-		91D0138ACFAD733E4061F12E450C336C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
-		9673CF780F48C8E4EC2A331717B1F67C /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99A217E3D52458139FC32625DC521007 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
-		A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */; };
-		B27DFD6025D94758785918F1D6F6C060 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27810809BAD71E4022600B21251449F /* QuartzCore.framework */; };
-		B5E7DB2C0548F9601BA392888EB65F3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
-		B758FB09FE2C06C1B8E36A71A9D76D41 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73D037B3C804B9E1BB70538E342E5104 /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BC952FC04FC963C1294DCD619C9B6B3B /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BE14F2198CDB0DAD98A567981D21C7A1 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */; };
-		BFCE460CC33E8872B7156D4166340178 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C41F4B79B64F510CAE6E5B4DBA678F99 /* Pods-TTDownLoad_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB3611940A897CDCA8E6269DB217228 /* Pods-TTDownLoad_Tests-dummy.m */; };
-		CAFA5E486BCE117A7D8C0FBF9DA6666B /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		DB7A106243AC974FC7EBEB00B506C786 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */; };
-		DFA67449E3D45B5C609BA7845861A158 /* TTM3u8DownloadManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A1716E20C1D4341B3EFA157C64690790 /* TTM3u8DownloadManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0EF6B2A6A797836AAFB9FB906EDF17F /* TTDownloadDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7443CD966181D0FB9438983B33550F82 /* TTDownloadDataManager.m */; };
-		F1AFF9B03922653C251707921BF3215F /* TTM3u8DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A23A53F2C6D2BB0CFC21705B4B0C24 /* TTM3u8DownloadManager.m */; };
-		FF2778D379166AA0AB63CE4B6C95062E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */; };
+		06E9A7A480648FCFB162F3298FA076D2 /* TTDownloadDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC831D06F302A4F23BCE85493285F76 /* TTDownloadDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F2B2D6EC565E5BE1211AD9063370765 /* TTDownLoad-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7D78D7C84E4445FC9F7786506454671 /* TTDownLoad-dummy.m */; };
+		140BC1FA43BCB5B94A13CA7D2C203370 /* Pods-TTDownLoad_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8910CF788B9F65879A2F8FDF39AF6BE8 /* Pods-TTDownLoad_Example-dummy.m */; };
+		30C799D90A1784ED96839ED342561C07 /* TTM3u8DownloadManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C0AACF13370C76B4EB147DD1AB85400 /* TTM3u8DownloadManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4302578C45AC16E7C989251968F5F80D /* TTDownloadModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 736A086DA34819AC6B9C9F7DD9A38D33 /* TTDownloadModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57C7B3599F1C296C833E622C3A91C1CF /* TTDownloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 774B8DB4E345853350243ED0C9EEBA51 /* TTDownloadModel.m */; };
+		5DB0221C838F934B927AC5427428E0D9 /* Pods-TTDownLoad_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 16E60A89859EACE8E7D47FBDDC63F190 /* Pods-TTDownLoad_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		658D61A063FDF92330C86980EE4552A9 /* TTListDownloadManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F170992FFFB65CC989E28C92CB9591F /* TTListDownloadManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		772A231BC6F2B5DD80F7F89F09E38576 /* TTListDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2533595A8E42B3908CDE4187852723E6 /* TTListDownloadManager.m */; };
+		B5E7DB2C0548F9601BA392888EB65F3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		EC279501BF79C648D64A5DC24B72A2E1 /* TTDownLoad-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7918B7CF5017F578A6F589661F9E049A /* TTDownLoad-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0EF6B2A6A797836AAFB9FB906EDF17F /* TTDownloadDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 655401D0A8A411DA915A24E8991FB0F2 /* TTDownloadDataManager.m */; };
+		F1AFF9B03922653C251707921BF3215F /* TTM3u8DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C628A33E261062AEE2FE152B56C67A /* TTM3u8DownloadManager.m */; };
+		F69CA821A62C960B6BB3C83A5F915362 /* TTDownloadDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CD18BAD9C9BB49A2DE5110393A9B8FCB /* TTDownloadDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF2778D379166AA0AB63CE4B6C95062E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,107 +32,46 @@
 			remoteGlobalIDString = 60E20D1A733247EC203D6CDCAAE151B8;
 			remoteInfo = TTDownLoad;
 		};
-		ED8D65D3E3380AA67A1B123D724C07E6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 34CD2E3428AB802BACA62286FF5074B1;
-			remoteInfo = FBSnapshotTestCase;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0294405F1EF854F6EAB1F39887F17138 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
-		0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
-		1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
-		15C1AF67873232FD0F32A274B7746DBB /* Pods-TTDownLoad_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTDownLoad_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1EA58034E3A1CC584F3D6EEE9767D714 /* Pods-TTDownLoad_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTDownLoad_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		200C919F4F9CBFC0E83099CFE95249B7 /* Pods-TTDownLoad_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TTDownLoad_Tests-resources.sh"; sourceTree = "<group>"; };
-		27E84F08F178A93F6A45D9934A83A4E7 /* Pods-TTDownLoad_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TTDownLoad_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2B33D65CF3BF3BE63BAD2B41BCB1500C /* TTDownLoad.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TTDownLoad.modulemap; sourceTree = "<group>"; };
-		2BCBE41C82F4F90BD30242F509E00C67 /* Pods-TTDownLoad_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTDownLoad_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
-		2F0054A1551B1988E2A7F58BB9D4861F /* TTDownLoad.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTDownLoad.xcconfig; sourceTree = "<group>"; };
-		2FEC456BAE89DFC3294DB61A62BDCD62 /* TTListDownloadManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTListDownloadManager.h; path = TTDownLoad/Classes/TTListDownloadManager.h; sourceTree = "<group>"; };
-		38875F296386FE882F8DBBECFDFE7E5B /* TTDownloadModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTDownloadModel.h; path = TTDownLoad/Classes/TTDownloadModel.h; sourceTree = "<group>"; };
-		39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
-		3A8F339250A1C3C5C5C5364254007103 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
-		3C4A91919C49762813990BA52FB8AA8E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
-		419382CA42441F10EC29DEE66B4D1309 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
-		4DBF26B6393BB7A2FB7924E1B189D4A1 /* Pods-TTDownLoad_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TTDownLoad_Example-frameworks.sh"; sourceTree = "<group>"; };
-		52C18C0EB1FED5EB5CE3B0E768AC510F /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
-		58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
-		5C8136B711B6330D727D1F1CFD3B83D1 /* Pods-TTDownLoad_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTDownLoad_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		641547CDCD9651AD11569358FF0E73B0 /* Pods_TTDownLoad_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TTDownLoad_Example.framework; path = "Pods-TTDownLoad_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		699A63F3E98B48CEE5D6A51D926843B5 /* Pods-TTDownLoad_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TTDownLoad_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6A9326F949859B1A106FEA90AE543BBA /* Pods-TTDownLoad_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTDownLoad_Example.release.xcconfig"; sourceTree = "<group>"; };
-		6E66B4218824CF8160D93713DDBEEA82 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E7900AE1846894D70CD5E89993636E4 /* Pods-TTDownLoad_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TTDownLoad_Example-umbrella.h"; sourceTree = "<group>"; };
-		6F4F5D309690E18E1F2308F6DD165478 /* Pods-TTDownLoad_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TTDownLoad_Example.modulemap"; sourceTree = "<group>"; };
-		7012D42A05D36DA4AE84F874535E8CB7 /* TTDownloadDataManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTDownloadDataManager.h; path = TTDownLoad/Classes/TTDownloadDataManager.h; sourceTree = "<group>"; };
-		71F4DF1D8C0EC2E50AA0D12F9D0D1F0C /* Pods_TTDownLoad_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TTDownLoad_Tests.framework; path = "Pods-TTDownLoad_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		720F11A31C8A03BCB1994A1FF845E0B5 /* Pods-TTDownLoad_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TTDownLoad_Tests.modulemap"; sourceTree = "<group>"; };
-		73D037B3C804B9E1BB70538E342E5104 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
-		7443CD966181D0FB9438983B33550F82 /* TTDownloadDataManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTDownloadDataManager.m; path = TTDownLoad/Classes/TTDownloadDataManager.m; sourceTree = "<group>"; };
-		7A2CE5011C89E76DC56942423D64EB1F /* TTDownLoad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TTDownLoad.framework; path = TTDownLoad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
-		7F05D4E98BFDA8BBA3162F5FA360206C /* TTDownLoad-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTDownLoad-umbrella.h"; sourceTree = "<group>"; };
-		823558E8AC8EB39D028DB5FBBEA227A3 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
-		85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
+		16E60A89859EACE8E7D47FBDDC63F190 /* Pods-TTDownLoad_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TTDownLoad_Example-umbrella.h"; sourceTree = "<group>"; };
+		1A693F68C4374B263FDA39C1348297DA /* TTDownLoad.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTDownLoad.xcconfig; sourceTree = "<group>"; };
+		2533595A8E42B3908CDE4187852723E6 /* TTListDownloadManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTListDownloadManager.m; path = TTDownLoad/Classes/TTListDownloadManager.m; sourceTree = "<group>"; };
+		2F170992FFFB65CC989E28C92CB9591F /* TTListDownloadManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTListDownloadManager.h; path = TTDownLoad/Classes/TTListDownloadManager.h; sourceTree = "<group>"; };
+		38CAFCFE7B05026CABF667CB5DA3DB15 /* Pods-TTDownLoad_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TTDownLoad_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4C30CD38DDBD3A5E188FCFE0340D6562 /* TTDownLoad.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TTDownLoad.modulemap; sourceTree = "<group>"; };
+		5963DFB0FB071654632C5061B9DCBF63 /* Pods-TTDownLoad_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TTDownLoad_Example-resources.sh"; sourceTree = "<group>"; };
+		62A8B24A63AC2B803F9829031B5BCB82 /* Pods-TTDownLoad_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTDownLoad_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		655401D0A8A411DA915A24E8991FB0F2 /* TTDownloadDataManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTDownloadDataManager.m; path = TTDownLoad/Classes/TTDownloadDataManager.m; sourceTree = "<group>"; };
+		659950CC56C71A1D08D5A6896B4C461A /* TTDownLoad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TTDownLoad.framework; path = TTDownLoad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6C0AACF13370C76B4EB147DD1AB85400 /* TTM3u8DownloadManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTM3u8DownloadManager.h; path = TTDownLoad/Classes/TTM3u8DownloadManager.h; sourceTree = "<group>"; };
+		736A086DA34819AC6B9C9F7DD9A38D33 /* TTDownloadModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTDownloadModel.h; path = TTDownLoad/Classes/TTDownloadModel.h; sourceTree = "<group>"; };
+		774B8DB4E345853350243ED0C9EEBA51 /* TTDownloadModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTDownloadModel.m; path = TTDownLoad/Classes/TTDownloadModel.m; sourceTree = "<group>"; };
+		7918B7CF5017F578A6F589661F9E049A /* TTDownLoad-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTDownLoad-umbrella.h"; sourceTree = "<group>"; };
+		8910CF788B9F65879A2F8FDF39AF6BE8 /* Pods-TTDownLoad_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TTDownLoad_Example-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9D7EDDA9180D7AA2E656C735FFD1BC81 /* TTDownLoad-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTDownLoad-prefix.pch"; sourceTree = "<group>"; };
-		A1716E20C1D4341B3EFA157C64690790 /* TTM3u8DownloadManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTM3u8DownloadManager.h; path = TTDownLoad/Classes/TTM3u8DownloadManager.h; sourceTree = "<group>"; };
-		A27810809BAD71E4022600B21251449F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		A52EEB7606E2914C563022F224F87334 /* Pods-TTDownLoad_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TTDownLoad_Example-resources.sh"; sourceTree = "<group>"; };
-		AA323C90663942983643D7A4D1F697C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B3A810A61DD0D39DB26889CAF5DC0CF0 /* TTDownloadModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTDownloadModel.m; path = TTDownLoad/Classes/TTDownloadModel.m; sourceTree = "<group>"; };
-		B8C0D10DC8E5C0083BFCA92BF4E9515A /* Pods-TTDownLoad_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TTDownLoad_Tests-umbrella.h"; sourceTree = "<group>"; };
-		B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
-		B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
-		BB118AE0A7B00EF6406230148A9D6B72 /* Pods-TTDownLoad_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTDownLoad_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C25D534CAAFDC943E760CB3FB7DF3339 /* Pods-TTDownLoad_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TTDownLoad_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		C57D6D9408D66C035F984D1D5FEEEC96 /* TTDownLoad-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTDownLoad-dummy.m"; sourceTree = "<group>"; };
-		C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		C9A23A53F2C6D2BB0CFC21705B4B0C24 /* TTM3u8DownloadManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTM3u8DownloadManager.m; path = TTDownLoad/Classes/TTM3u8DownloadManager.m; sourceTree = "<group>"; };
-		CC12BCFA3FC0B8C307F5B38C673EDD12 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
-		D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
-		DADAF30F2D84FDAAD2ADD2D50C1F40DF /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
-		DC6CC5698A1BC9EF5273116A2685C11B /* Pods-TTDownLoad_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TTDownLoad_Example-dummy.m"; sourceTree = "<group>"; };
-		E2D829AA3C8E4DDF762C31A9D964EB9D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2EE3506580AA9B90BCB92D58DCC1CE5 /* TTListDownloadManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTListDownloadManager.m; path = TTDownLoad/Classes/TTListDownloadManager.m; sourceTree = "<group>"; };
-		E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
-		ECB3611940A897CDCA8E6269DB217228 /* Pods-TTDownLoad_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TTDownLoad_Tests-dummy.m"; sourceTree = "<group>"; };
+		9AC831D06F302A4F23BCE85493285F76 /* TTDownloadDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTDownloadDelegate.h; path = TTDownLoad/Classes/TTDownloadDelegate.h; sourceTree = "<group>"; };
+		AC80FB28086D9FF51C44EF45057413A1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3C628A33E261062AEE2FE152B56C67A /* TTM3u8DownloadManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TTM3u8DownloadManager.m; path = TTDownLoad/Classes/TTM3u8DownloadManager.m; sourceTree = "<group>"; };
+		B7D78D7C84E4445FC9F7786506454671 /* TTDownLoad-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTDownLoad-dummy.m"; sourceTree = "<group>"; };
+		BE5636B6A392E7D812E9214EAD3A61FD /* Pods-TTDownLoad_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TTDownLoad_Example.modulemap"; sourceTree = "<group>"; };
+		CD18BAD9C9BB49A2DE5110393A9B8FCB /* TTDownloadDataManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TTDownloadDataManager.h; path = TTDownLoad/Classes/TTDownloadDataManager.h; sourceTree = "<group>"; };
+		CEB8A2B6451789D27F2DB43C2BB0114F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8E5325ECCA9009B9E8C65EB482F3FF9 /* TTDownLoad-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTDownLoad-prefix.pch"; sourceTree = "<group>"; };
+		DDABE29729E6E1A58C8E23CB842A37BE /* Pods-TTDownLoad_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTDownLoad_Example.release.xcconfig"; sourceTree = "<group>"; };
+		E3A53F7DC3BBE3C45B2D339A2579E4E0 /* Pods-TTDownLoad_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTDownLoad_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		E69A9B4CE33021148BD6683CE2692CEE /* Pods-TTDownLoad_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TTDownLoad_Example-frameworks.sh"; sourceTree = "<group>"; };
+		F524F6362ABB1EFAF1DA12CF9987F642 /* Pods_TTDownLoad_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TTDownLoad_Example.framework; path = "Pods-TTDownLoad_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1D421A30A1BDB7E1C4216F64D0C939B1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				91D0138ACFAD733E4061F12E450C336C /* Foundation.framework in Frameworks */,
-				B27DFD6025D94758785918F1D6F6C060 /* QuartzCore.framework in Frameworks */,
-				841FF232C33C7D49C58CEFDBE7EEB92B /* UIKit.framework in Frameworks */,
-				7E9B14D5F8842A86CA86F2AF45230725 /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3795F8F07B29B1052301836874A95616 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FF2778D379166AA0AB63CE4B6C95062E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5010D0166A0E0DF5ADFBB3DAC49E0F1F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				99A217E3D52458139FC32625DC521007 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,229 +86,121 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07F41C880288273A21ED7D51213C93F4 /* Support Files */ = {
+		4DA5BE2AC47E465CBE24A8DCC8F2B463 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				419382CA42441F10EC29DEE66B4D1309 /* Info.plist */,
-				2B33D65CF3BF3BE63BAD2B41BCB1500C /* TTDownLoad.modulemap */,
-				2F0054A1551B1988E2A7F58BB9D4861F /* TTDownLoad.xcconfig */,
-				C57D6D9408D66C035F984D1D5FEEEC96 /* TTDownLoad-dummy.m */,
-				9D7EDDA9180D7AA2E656C735FFD1BC81 /* TTDownLoad-prefix.pch */,
-				7F05D4E98BFDA8BBA3162F5FA360206C /* TTDownLoad-umbrella.h */,
+				AC80FB28086D9FF51C44EF45057413A1 /* Info.plist */,
+				4C30CD38DDBD3A5E188FCFE0340D6562 /* TTDownLoad.modulemap */,
+				1A693F68C4374B263FDA39C1348297DA /* TTDownLoad.xcconfig */,
+				B7D78D7C84E4445FC9F7786506454671 /* TTDownLoad-dummy.m */,
+				D8E5325ECCA9009B9E8C65EB482F3FF9 /* TTDownLoad-prefix.pch */,
+				7918B7CF5017F578A6F589661F9E049A /* TTDownLoad-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/TTDownLoad";
 			sourceTree = "<group>";
 		};
-		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+		57762E5CB55C7CC167520EC258059582 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8D22B0D091B0427E43C82354D9CA8E06 /* iOS */,
+				7E1171471A8634D2DFFB44851870D6B8 /* TTDownLoad */,
 			);
-			name = Frameworks;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		1549F91FCD089822594C1F5DB8AB9E8F /* Support Files */ = {
+		5B9EC3A7F65FB91896ADEBB90F075265 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				823558E8AC8EB39D028DB5FBBEA227A3 /* FBSnapshotTestCase.modulemap */,
-				DADAF30F2D84FDAAD2ADD2D50C1F40DF /* FBSnapshotTestCase.xcconfig */,
-				52C18C0EB1FED5EB5CE3B0E768AC510F /* FBSnapshotTestCase-dummy.m */,
-				CC12BCFA3FC0B8C307F5B38C673EDD12 /* FBSnapshotTestCase-prefix.pch */,
-				73D037B3C804B9E1BB70538E342E5104 /* FBSnapshotTestCase-umbrella.h */,
-				6E66B4218824CF8160D93713DDBEEA82 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FBSnapshotTestCase";
-			sourceTree = "<group>";
-		};
-		1B12EA45A674CD590D33E050AF2FA8B9 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2433F760CA75E6AF020AE443426FD3D4 /* Pods-TTDownLoad_Example */,
-				2B0EE385C2070A79B0FA46A396664AF0 /* Pods-TTDownLoad_Tests */,
+				B125495641F2F80F84AF3F5C21CCD131 /* Pods-TTDownLoad_Example */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2287B5EBEAA3C332F8DB9A1E61F5B097 /* FBSnapshotTestCase */ = {
+		62B3A3406F53E504EE90DE54EBE3446D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F35791481CAFDD8E7715AE1B44687328 /* Core */,
-				1549F91FCD089822594C1F5DB8AB9E8F /* Support Files */,
-				99E46DD4AB2256791F111C718CB0EEF8 /* SwiftSupport */,
-			);
-			name = FBSnapshotTestCase;
-			path = FBSnapshotTestCase;
-			sourceTree = "<group>";
-		};
-		2433F760CA75E6AF020AE443426FD3D4 /* Pods-TTDownLoad_Example */ = {
-			isa = PBXGroup;
-			children = (
-				3C4A91919C49762813990BA52FB8AA8E /* Info.plist */,
-				6F4F5D309690E18E1F2308F6DD165478 /* Pods-TTDownLoad_Example.modulemap */,
-				699A63F3E98B48CEE5D6A51D926843B5 /* Pods-TTDownLoad_Example-acknowledgements.markdown */,
-				2BCBE41C82F4F90BD30242F509E00C67 /* Pods-TTDownLoad_Example-acknowledgements.plist */,
-				DC6CC5698A1BC9EF5273116A2685C11B /* Pods-TTDownLoad_Example-dummy.m */,
-				4DBF26B6393BB7A2FB7924E1B189D4A1 /* Pods-TTDownLoad_Example-frameworks.sh */,
-				A52EEB7606E2914C563022F224F87334 /* Pods-TTDownLoad_Example-resources.sh */,
-				6E7900AE1846894D70CD5E89993636E4 /* Pods-TTDownLoad_Example-umbrella.h */,
-				1EA58034E3A1CC584F3D6EEE9767D714 /* Pods-TTDownLoad_Example.debug.xcconfig */,
-				6A9326F949859B1A106FEA90AE543BBA /* Pods-TTDownLoad_Example.release.xcconfig */,
-			);
-			name = "Pods-TTDownLoad_Example";
-			path = "Target Support Files/Pods-TTDownLoad_Example";
-			sourceTree = "<group>";
-		};
-		2B0EE385C2070A79B0FA46A396664AF0 /* Pods-TTDownLoad_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				E2D829AA3C8E4DDF762C31A9D964EB9D /* Info.plist */,
-				720F11A31C8A03BCB1994A1FF845E0B5 /* Pods-TTDownLoad_Tests.modulemap */,
-				27E84F08F178A93F6A45D9934A83A4E7 /* Pods-TTDownLoad_Tests-acknowledgements.markdown */,
-				5C8136B711B6330D727D1F1CFD3B83D1 /* Pods-TTDownLoad_Tests-acknowledgements.plist */,
-				ECB3611940A897CDCA8E6269DB217228 /* Pods-TTDownLoad_Tests-dummy.m */,
-				C25D534CAAFDC943E760CB3FB7DF3339 /* Pods-TTDownLoad_Tests-frameworks.sh */,
-				200C919F4F9CBFC0E83099CFE95249B7 /* Pods-TTDownLoad_Tests-resources.sh */,
-				B8C0D10DC8E5C0083BFCA92BF4E9515A /* Pods-TTDownLoad_Tests-umbrella.h */,
-				BB118AE0A7B00EF6406230148A9D6B72 /* Pods-TTDownLoad_Tests.debug.xcconfig */,
-				15C1AF67873232FD0F32A274B7746DBB /* Pods-TTDownLoad_Tests.release.xcconfig */,
-			);
-			name = "Pods-TTDownLoad_Tests";
-			path = "Target Support Files/Pods-TTDownLoad_Tests";
-			sourceTree = "<group>";
-		};
-		4A9C536CA18658BC751027085E261CBA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0294405F1EF854F6EAB1F39887F17138 /* FBSnapshotTestCase.framework */,
-				641547CDCD9651AD11569358FF0E73B0 /* Pods_TTDownLoad_Example.framework */,
-				71F4DF1D8C0EC2E50AA0D12F9D0D1F0C /* Pods_TTDownLoad_Tests.framework */,
-				7A2CE5011C89E76DC56942423D64EB1F /* TTDownLoad.framework */,
+				F524F6362ABB1EFAF1DA12CF9987F642 /* Pods_TTDownLoad_Example.framework */,
+				659950CC56C71A1D08D5A6896B4C461A /* TTDownLoad.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		70D07FA13C2EE32E339BD9AED804EE0C /* TTDownLoad */ = {
-			isa = PBXGroup;
-			children = (
-				7012D42A05D36DA4AE84F874535E8CB7 /* TTDownloadDataManager.h */,
-				7443CD966181D0FB9438983B33550F82 /* TTDownloadDataManager.m */,
-				38875F296386FE882F8DBBECFDFE7E5B /* TTDownloadModel.h */,
-				B3A810A61DD0D39DB26889CAF5DC0CF0 /* TTDownloadModel.m */,
-				2FEC456BAE89DFC3294DB61A62BDCD62 /* TTListDownloadManager.h */,
-				E2EE3506580AA9B90BCB92D58DCC1CE5 /* TTListDownloadManager.m */,
-				A1716E20C1D4341B3EFA157C64690790 /* TTM3u8DownloadManager.h */,
-				C9A23A53F2C6D2BB0CFC21705B4B0C24 /* TTM3u8DownloadManager.m */,
-				07F41C880288273A21ED7D51213C93F4 /* Support Files */,
-			);
-			name = TTDownLoad;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				7FB57E1E7366A47050D4EC52F6ED2101 /* Development Pods */,
-				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				FBD2D672921284E66F309CA3462F84D6 /* Pods */,
-				4A9C536CA18658BC751027085E261CBA /* Products */,
-				1B12EA45A674CD590D33E050AF2FA8B9 /* Targets Support Files */,
+				57762E5CB55C7CC167520EC258059582 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				62B3A3406F53E504EE90DE54EBE3446D /* Products */,
+				5B9EC3A7F65FB91896ADEBB90F075265 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7FB57E1E7366A47050D4EC52F6ED2101 /* Development Pods */ = {
+		7E1171471A8634D2DFFB44851870D6B8 /* TTDownLoad */ = {
 			isa = PBXGroup;
 			children = (
-				70D07FA13C2EE32E339BD9AED804EE0C /* TTDownLoad */,
+				CD18BAD9C9BB49A2DE5110393A9B8FCB /* TTDownloadDataManager.h */,
+				655401D0A8A411DA915A24E8991FB0F2 /* TTDownloadDataManager.m */,
+				9AC831D06F302A4F23BCE85493285F76 /* TTDownloadDelegate.h */,
+				736A086DA34819AC6B9C9F7DD9A38D33 /* TTDownloadModel.h */,
+				774B8DB4E345853350243ED0C9EEBA51 /* TTDownloadModel.m */,
+				2F170992FFFB65CC989E28C92CB9591F /* TTListDownloadManager.h */,
+				2533595A8E42B3908CDE4187852723E6 /* TTListDownloadManager.m */,
+				6C0AACF13370C76B4EB147DD1AB85400 /* TTM3u8DownloadManager.h */,
+				B3C628A33E261062AEE2FE152B56C67A /* TTM3u8DownloadManager.m */,
+				4DA5BE2AC47E465CBE24A8DCC8F2B463 /* Support Files */,
 			);
-			name = "Development Pods";
+			name = TTDownLoad;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		8D22B0D091B0427E43C82354D9CA8E06 /* iOS */ = {
+		B125495641F2F80F84AF3F5C21CCD131 /* Pods-TTDownLoad_Example */ = {
 			isa = PBXGroup;
 			children = (
-				C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */,
-				A27810809BAD71E4022600B21251449F /* QuartzCore.framework */,
-				AA323C90663942983643D7A4D1F697C8 /* UIKit.framework */,
-				3A8F339250A1C3C5C5C5364254007103 /* XCTest.framework */,
+				CEB8A2B6451789D27F2DB43C2BB0114F /* Info.plist */,
+				BE5636B6A392E7D812E9214EAD3A61FD /* Pods-TTDownLoad_Example.modulemap */,
+				38CAFCFE7B05026CABF667CB5DA3DB15 /* Pods-TTDownLoad_Example-acknowledgements.markdown */,
+				62A8B24A63AC2B803F9829031B5BCB82 /* Pods-TTDownLoad_Example-acknowledgements.plist */,
+				8910CF788B9F65879A2F8FDF39AF6BE8 /* Pods-TTDownLoad_Example-dummy.m */,
+				E69A9B4CE33021148BD6683CE2692CEE /* Pods-TTDownLoad_Example-frameworks.sh */,
+				5963DFB0FB071654632C5061B9DCBF63 /* Pods-TTDownLoad_Example-resources.sh */,
+				16E60A89859EACE8E7D47FBDDC63F190 /* Pods-TTDownLoad_Example-umbrella.h */,
+				E3A53F7DC3BBE3C45B2D339A2579E4E0 /* Pods-TTDownLoad_Example.debug.xcconfig */,
+				DDABE29729E6E1A58C8E23CB842A37BE /* Pods-TTDownLoad_Example.release.xcconfig */,
+			);
+			name = "Pods-TTDownLoad_Example";
+			path = "Target Support Files/Pods-TTDownLoad_Example";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		99E46DD4AB2256791F111C718CB0EEF8 /* SwiftSupport */ = {
-			isa = PBXGroup;
-			children = (
-				D97545C39C4A5EE2631DD9FFECE76A40 /* SwiftSupport.swift */,
-			);
-			name = SwiftSupport;
-			sourceTree = "<group>";
-		};
-		F35791481CAFDD8E7715AE1B44687328 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				E37899BD4B349060AA147E2A3721D3A2 /* FBSnapshotTestCase.h */,
-				39577E2B806B8B2D019998DE60728F63 /* FBSnapshotTestCase.m */,
-				7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */,
-				58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */,
-				1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */,
-				052258A488A96C35531FAC73C4F42924 /* FBSnapshotTestController.m */,
-				B9109B8B333B5A1A3E92EFC09EDC10AC /* UIApplication+StrictKeyWindow.h */,
-				2EECE81A9AEC1ED1057A9C3C88DBCEBE /* UIApplication+StrictKeyWindow.m */,
-				432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */,
-				3B5E22F9517F21D3A0251F88FCAB281E /* UIImage+Compare.m */,
-				85E250EF19C5B5671AEC10BEB508D087 /* UIImage+Diff.h */,
-				B9CEF7D6C5E08AB80E58DABC75D882BC /* UIImage+Diff.m */,
-				0B161931541BFE46DFEA2092EDDDA815 /* UIImage+Snapshot.h */,
-				3DBFBDCC891B770A2AC9EF0FB164B751 /* UIImage+Snapshot.m */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		FBD2D672921284E66F309CA3462F84D6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2287B5EBEAA3C332F8DB9A1E61F5B097 /* FBSnapshotTestCase */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		74E501556271621388099E2070188980 /* Headers */ = {
+		BE876782C55E6D54C909FA7D9CCCEB30 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D37A734D238F224D488F6466E0578C7 /* TTDownLoad-umbrella.h in Headers */,
-				1A0D3DC30DEC85EF75837E7F70CCF537 /* TTDownloadDataManager.h in Headers */,
-				83BD771083242B6F4061CFEC8AC4AF21 /* TTDownloadModel.h in Headers */,
-				1FA731F2147F63CDF52A67A1737A4E9F /* TTListDownloadManager.h in Headers */,
-				DFA67449E3D45B5C609BA7845861A158 /* TTM3u8DownloadManager.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		93599756C1955C37152BF64097B786F8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F221B159B04A95986BBD5AC4DCFE7E1 /* Pods-TTDownLoad_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9DC6F5AC11E37A1EB45C6473C9E800B6 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B758FB09FE2C06C1B8E36A71A9D76D41 /* FBSnapshotTestCase-umbrella.h in Headers */,
-				9673CF780F48C8E4EC2A331717B1F67C /* FBSnapshotTestCase.h in Headers */,
-				BFCE460CC33E8872B7156D4166340178 /* FBSnapshotTestCasePlatform.h in Headers */,
-				2F485B69F51E4F723A38410F31F08550 /* FBSnapshotTestController.h in Headers */,
-				BC952FC04FC963C1294DCD619C9B6B3B /* UIApplication+StrictKeyWindow.h in Headers */,
-				CAFA5E486BCE117A7D8C0FBF9DA6666B /* UIImage+Compare.h in Headers */,
-				051A816D6DD0CAE13496DDCFE0829167 /* UIImage+Diff.h in Headers */,
-				421CDD701AEE0F2458A84200366CDD0F /* UIImage+Snapshot.h in Headers */,
+				EC279501BF79C648D64A5DC24B72A2E1 /* TTDownLoad-umbrella.h in Headers */,
+				F69CA821A62C960B6BB3C83A5F915362 /* TTDownloadDataManager.h in Headers */,
+				06E9A7A480648FCFB162F3298FA076D2 /* TTDownloadDelegate.h in Headers */,
+				4302578C45AC16E7C989251968F5F80D /* TTDownloadModel.h in Headers */,
+				658D61A063FDF92330C86980EE4552A9 /* TTListDownloadManager.h in Headers */,
+				30C799D90A1784ED96839ED342561C07 /* TTM3u8DownloadManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,24 +230,7 @@
 			);
 			name = "Pods-TTDownLoad_Example";
 			productName = "Pods-TTDownLoad_Example";
-			productReference = 641547CDCD9651AD11569358FF0E73B0 /* Pods_TTDownLoad_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		34CD2E3428AB802BACA62286FF5074B1 /* FBSnapshotTestCase */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F28097D43AF5CD8DA838ABD52A053790 /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */;
-			buildPhases = (
-				E2E80CCD063D04B57A1A5E140726E8A4 /* Sources */,
-				1D421A30A1BDB7E1C4216F64D0C939B1 /* Frameworks */,
-				9DC6F5AC11E37A1EB45C6473C9E800B6 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = FBSnapshotTestCase;
-			productName = FBSnapshotTestCase;
-			productReference = 0294405F1EF854F6EAB1F39887F17138 /* FBSnapshotTestCase.framework */;
+			productReference = F524F6362ABB1EFAF1DA12CF9987F642 /* Pods_TTDownLoad_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		60E20D1A733247EC203D6CDCAAE151B8 /* TTDownLoad */ = {
@@ -448,7 +239,7 @@
 			buildPhases = (
 				8F7FB5D6B0A7B2CED42D3499A024F065 /* Sources */,
 				E79FBEF7B957CA4BCEABB05B4D6C62E3 /* Frameworks */,
-				74E501556271621388099E2070188980 /* Headers */,
+				BE876782C55E6D54C909FA7D9CCCEB30 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -456,25 +247,7 @@
 			);
 			name = TTDownLoad;
 			productName = TTDownLoad;
-			productReference = 7A2CE5011C89E76DC56942423D64EB1F /* TTDownLoad.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C97BC70395B262A73982087ACB048AC8 /* Pods-TTDownLoad_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E3CDB0B40CA59256D09E504B4A641987 /* Build configuration list for PBXNativeTarget "Pods-TTDownLoad_Tests" */;
-			buildPhases = (
-				F55B6E8839399CAE8919C878A90994F2 /* Sources */,
-				5010D0166A0E0DF5ADFBB3DAC49E0F1F /* Frameworks */,
-				93599756C1955C37152BF64097B786F8 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				30A284C67557AC7E4A9FC317B2A7F409 /* PBXTargetDependency */,
-			);
-			name = "Pods-TTDownLoad_Tests";
-			productName = "Pods-TTDownLoad_Tests";
-			productReference = 71F4DF1D8C0EC2E50AA0D12F9D0D1F0C /* Pods_TTDownLoad_Tests.framework */;
+			productReference = 659950CC56C71A1D08D5A6896B4C461A /* TTDownLoad.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -494,13 +267,11 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 4A9C536CA18658BC751027085E261CBA /* Products */;
+			productRefGroup = 62B3A3406F53E504EE90DE54EBE3446D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				34CD2E3428AB802BACA62286FF5074B1 /* FBSnapshotTestCase */,
 				0FB55351447F68DB739144A3628A3F49 /* Pods-TTDownLoad_Example */,
-				C97BC70395B262A73982087ACB048AC8 /* Pods-TTDownLoad_Tests */,
 				60E20D1A733247EC203D6CDCAAE151B8 /* TTDownLoad */,
 			);
 		};
@@ -527,39 +298,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E2E80CCD063D04B57A1A5E140726E8A4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				506D761F91EC3583789A837C559972FE /* FBSnapshotTestCase-dummy.m in Sources */,
-				BE14F2198CDB0DAD98A567981D21C7A1 /* FBSnapshotTestCase.m in Sources */,
-				DB7A106243AC974FC7EBEB00B506C786 /* FBSnapshotTestCasePlatform.m in Sources */,
-				A4F69F3477A935285620AC3031C5C848 /* FBSnapshotTestController.m in Sources */,
-				1AB7934C16CE49DE196FFC7BE7278287 /* SwiftSupport.swift in Sources */,
-				094973D2D2F1E3B2E772F93C8147C6B9 /* UIApplication+StrictKeyWindow.m in Sources */,
-				69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */,
-				35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */,
-				756564ABAF2892FE7140C92A1CDDCF65 /* UIImage+Snapshot.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F55B6E8839399CAE8919C878A90994F2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C41F4B79B64F510CAE6E5B4DBA678F99 /* Pods-TTDownLoad_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		30A284C67557AC7E4A9FC317B2A7F409 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSnapshotTestCase;
-			target = 34CD2E3428AB802BACA62286FF5074B1 /* FBSnapshotTestCase */;
-			targetProxy = ED8D65D3E3380AA67A1B123D724C07E6 /* PBXContainerItemProxy */;
-		};
 		C1F1BD3B5EF17F93E909E6A323B353AC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TTDownLoad;
@@ -571,7 +312,7 @@
 /* Begin XCBuildConfiguration section */
 		0AD5C1359B651E5452339C5D33C79884 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F0054A1551B1988E2A7F58BB9D4861F /* TTDownLoad.xcconfig */;
+			baseConfigurationReference = 1A693F68C4374B263FDA39C1348297DA /* TTDownLoad.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -660,7 +401,7 @@
 		};
 		55CCEA07822876B56AF7245C124CFDD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EA58034E3A1CC584F3D6EEE9767D714 /* Pods-TTDownLoad_Example.debug.xcconfig */;
+			baseConfigurationReference = E3A53F7DC3BBE3C45B2D339A2579E4E0 /* Pods-TTDownLoad_Example.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -692,7 +433,7 @@
 		};
 		66D20F670A2D8E581C997A05AF49E5F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A9326F949859B1A106FEA90AE543BBA /* Pods-TTDownLoad_Example.release.xcconfig */;
+			baseConfigurationReference = DDABE29729E6E1A58C8E23CB842A37BE /* Pods-TTDownLoad_Example.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -780,7 +521,7 @@
 		};
 		850F6CE6B09337168D3A74A371ACE79A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F0054A1551B1988E2A7F58BB9D4861F /* TTDownLoad.xcconfig */;
+			baseConfigurationReference = 1A693F68C4374B263FDA39C1348297DA /* TTDownLoad.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -801,135 +542,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B2E52370F534DFE0FF7634F754F4F618 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DADAF30F2D84FDAAD2ADD2D50C1F40DF /* FBSnapshotTestCase.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
-				PRODUCT_NAME = FBSnapshotTestCase;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CEA992D818C17C13A97E42D0734BF7D3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DADAF30F2D84FDAAD2ADD2D50C1F40DF /* FBSnapshotTestCase.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
-				PRODUCT_NAME = FBSnapshotTestCase;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F13CFE0D4FFAEF9F7580E8A8B9492A93 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB118AE0A7B00EF6406230148A9D6B72 /* Pods-TTDownLoad_Tests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TTDownLoad_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TTDownLoad_Tests/Pods-TTDownLoad_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TTDownLoad_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FB392722EC4637086410D17DDB4AD33B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15C1AF67873232FD0F32A274B7746DBB /* Pods-TTDownLoad_Tests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TTDownLoad_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TTDownLoad_Tests/Pods-TTDownLoad_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TTDownLoad_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -963,24 +575,6 @@
 			buildConfigurations = (
 				0AD5C1359B651E5452339C5D33C79884 /* Debug */,
 				850F6CE6B09337168D3A74A371ACE79A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E3CDB0B40CA59256D09E504B4A641987 /* Build configuration list for PBXNativeTarget "Pods-TTDownLoad_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F13CFE0D4FFAEF9F7580E8A8B9492A93 /* Debug */,
-				FB392722EC4637086410D17DDB4AD33B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F28097D43AF5CD8DA838ABD52A053790 /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CEA992D818C17C13A97E42D0734BF7D3 /* Debug */,
-				B2E52370F534DFE0FF7634F754F4F618 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
