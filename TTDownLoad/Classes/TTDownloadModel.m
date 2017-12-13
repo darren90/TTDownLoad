@@ -28,21 +28,18 @@
 
 @implementation TTDownloadModel
 
-- (instancetype)init
-{
+- (instancetype)init {
     if (self = [super init]) {
         _progress = [[TTDownloadProgress alloc]init];
     }
     return self;
 }
 
-- (instancetype)initWithURLString:(NSString *)URLString
-{
+- (instancetype)initWithURLString:(NSString *)URLString{
     return [self initWithURLString:URLString filePath:nil];
 }
 
-- (instancetype)initWithURLString:(NSString *)URLString filePath:(NSString *)filePath
-{
+- (instancetype)initWithURLString:(NSString *)URLString filePath:(NSString *)filePath {
     if (self = [self init]) {
         _downloadURL = URLString;
         _fileName = filePath.lastPathComponent;
@@ -52,8 +49,7 @@
     return self;
 }
 
--(NSString *)fileName
-{
+-(NSString *)fileName {
     if (!_fileName) {
         _fileName = _downloadURL.lastPathComponent;
     }
