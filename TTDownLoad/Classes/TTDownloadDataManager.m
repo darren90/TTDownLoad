@@ -10,8 +10,8 @@
 #import <UIKit/UIKit.h>
 #import "TTM3u8DownloadManager.h"
 #import "TTListDownloadManager.h"
-//#import "DatabaseTool.h"
-//#import "DownLoadTools.h"
+#import "DatabaseTool.h"
+#import "DownloadTool.h"
 //#import "RRMJTool.h"
 //#import "MainGetPlayUrl.h"
 
@@ -135,8 +135,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (NSOperationQueue *)queue
-{
+- (NSOperationQueue *)queue {
     if (!_queue) {
         _queue = [[NSOperationQueue alloc]init];
         _queue.maxConcurrentOperationCount = 1;
@@ -149,32 +148,18 @@
 -(void)startEngine{
     NSArray *array = [DatabaseTool getDownModeArray:NO];//拿到未下载的数据
     if (!array.count)  return;
-    
-    RRNetStatus netStatus = [RRMJTool getCacheNetStatusWhenAppStart];
-    
-    //    switch (netStatus) {
-    //        case RRNoNet:
-    //            break;
-    //        case RRNetVia3GDownNot:
-    //            break;
-    //        case RRNetViaWifi:  {
-    //            [self.downloadingModels addObjectsFromArray:array];
-    //            [self.downloadAllModels addObjectsFromArray:array];
-    //            return;
-    //        }
-    //        default:
-    //            break;
-    //    }
-    
-    if(netStatus == RRNetViaWifi) {     // 开始下载
-        for (TTDownloadModel *model in array) {
-            [self resumeWithDownloadModel:model];
-        }
-    } else {                            //加入列表
-        [self.downloadingModels addObjectsFromArray:array];
-        [self.downloadAllModels addObjectsFromArray:array];
-    }
-    
+#warning TODO - 待做
+//    RRNetStatus netStatus = [RRMJTool getCacheNetStatusWhenAppStart];
+//
+//
+//    if(netStatus == RRNetViaWifi) {     // 开始下载
+//        for (TTDownloadModel *model in array) {
+//            [self resumeWithDownloadModel:model];
+//        }
+//    } else {                            //加入列表
+//        [self.downloadingModels addObjectsFromArray:array];
+//        [self.downloadAllModels addObjectsFromArray:array];
+//    }
 }
 
 // 下载model字典
@@ -220,14 +205,14 @@
 {
     // 验证下载地址
     if (!URLString) {
-        DLog(@"dwonloadURL can't nil");
+        NSLog(@"dwonloadURL can't nil");
         return nil;
     }
     
     TTDownloadModel *downloadModel = [self downLoadingModelForURLString:URLString];
     
     if (!downloadModel || ![downloadModel.filePath isEqualToString:destinationPath]) {
-        downloadModel = [[RRDownloadModel alloc]initWithURLString:URLString filePath:destinationPath];
+        downloadModel = [[TTDownloadModel alloc]initWithURLString:URLString filePath:destinationPath];
     }
     
     [self startWithDownloadModel:downloadModel progress:progress state:state];
@@ -235,7 +220,7 @@
     return downloadModel;
 }
 
-- (void)startWithDownloadModel:(TTDownloadModel *)downloadModel progress:(TTDownloadProgressBlock)progress state:(RRDownloadStateBlock)state
+- (void)startWithDownloadModel:(TTDownloadModel *)downloadModel progress:(TTDownloadProgressBlock)progress state:(TTDownloadStateBlock)state
 {
     downloadModel.progressBlock = progress;
     downloadModel.stateBlock = state;
@@ -249,7 +234,7 @@
     
     BOOL result = [DatabaseTool isFileModelInDB:downloadModel.uniquenName movieType:downloadModel.movieType];///已经下载过一次
     if(result){//已经下载过一次该音乐
-        DLog(@"--该文件已下载，是否重新下载？--");
+        NSLog(@"--该文件已下载，是否重新下载？--");
         return;
     }
     
@@ -289,7 +274,7 @@
         [self.downloadingModels removeObject:downloadModel];
         // 还有未下载的
         if (self.waitingDownloadModels.count > 0) {
-            RRDownloadModel *model =  [self.waitingDownloadModels filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"state==%d", RRDownloadStateReadying]].firstObject;
+            TTDownloadModel *model =  [self.waitingDownloadModels filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"state==%d", RRDownloadStateReadying]].firstObject;
             [self resumeWithDownloadModel:model];
         }
     }
@@ -344,66 +329,47 @@
         [self resumeRealDownloadModel:downloadModel];
     }else{
         __weak __typeof(self)weakSelf = self;
-        [MainGetPlayUrl getUrlWithSeasonId:downloadModel.movieId episodeSid:downloadModel.episodeSid quality:downloadModel.quality movieType:downloadModel.movieType isLocal:YES andBlock:^(urlDataModel *data, NSError *error) {
-            //            data.listModel.m3u8.url = @"http://pl.youku.com/playlist/m3u8?ctype=12&ep=cCaVGE6OUc8H4ircjj8bMiuwdH8KXJZ0vESH%2f7YbAMZuNaHQmjbTwg%3d%3d&ev=1&keyframe=1&oip=996949050&sid=241273717793612e7b085&token=3825&type=hd2&vid=XNzk2NTI0MzMy";
-            NSString *m3u8Url = data.listModel.m3u8.url;
-            DLog(@"--获取下载地址OK--m3u8--%@--error:%@",m3u8Url,error);
-            if (!error && data.listModel) {
-                NSString *name  = @"";
-                if ([m3u8Url.lowercaseString rangeOfString:@"m3u8"].location != NSNotFound || [m3u8Url.lowercaseString rangeOfString:@"tss=ios"].location != NSNotFound) {
-                    downloadModel.urlType = UrlM3u8;
-                    name = [NSString stringWithFormat:@"%@",downloadModel.uniquenName];//存储硬盘上的的名字
-                }else{
-                    downloadModel.urlType = UrlHttp;
-                    name = [NSString stringWithFormat:@"%@.mp4",downloadModel.uniquenName];//存储硬盘上的的名字
-                }
-                
-                
-                //头信息
-                [self adddownHeader:downloadModel data:data];
-                
-#pragma mark --- List 的下载
-                if(data.listModel.m3u8.qqPlayArr.count > 0 && data.listModel.m3u8.url.length == 0){//list
-                    downloadModel.urlArray = data.listModel.m3u8.qqPlayArr;
-                    downloadModel.total_filesize = data.listModel.m3u8.total_filesize;
-                }else{
-                    downloadModel.downloadURL = data.listModel.m3u8.url;
-                }
-                //制作模型
-                downloadModel.title = [downloadModel.title stringByReplacingOccurrencesOfString:@" " withString:@""];//替换空格
-                downloadModel.fileName = name;
-                [DatabaseTool updateRealUrl:downloadModel];//更新最新的下载地址
-                [weakSelf resumeRealDownloadModel:downloadModel];
-            }else{
-                DLog(@"没有下载地址");
-                // 下载失败
-                dispatch_async(dispatch_get_main_queue(), ^(){
-                    downloadModel.state = RRDownloadStateFailed;
-                    [self downloadModel:downloadModel didChangeState:RRDownloadStateFailed filePath:nil error:error];
-                    [self willResumeNextWithDowloadModel:downloadModel];
-                });
-            }
-        }];
+//        [MainGetPlayUrl getUrlWithSeasonId:downloadModel.movieId episodeSid:downloadModel.episodeSid quality:downloadModel.quality movieType:downloadModel.movieType isLocal:YES andBlock:^(urlDataModel *data, NSError *error) {
+//            //            data.listModel.m3u8.url = @"http://pl.youku.com/playlist/m3u8?ctype=12&ep=cCaVGE6OUc8H4ircjj8bMiuwdH8KXJZ0vESH%2f7YbAMZuNaHQmjbTwg%3d%3d&ev=1&keyframe=1&oip=996949050&sid=241273717793612e7b085&token=3825&type=hd2&vid=XNzk2NTI0MzMy";
+//            NSString *m3u8Url = data.listModel.m3u8.url;
+//            NSLog(@"--获取下载地址OK--m3u8--%@--error:%@",m3u8Url,error);
+//            if (!error && data.listModel) {
+//                NSString *name  = @"";
+//                if ([m3u8Url.lowercaseString rangeOfString:@"m3u8"].location != NSNotFound || [m3u8Url.lowercaseString rangeOfString:@"tss=ios"].location != NSNotFound) {
+//                    downloadModel.urlType = UrlM3u8;
+//                    name = [NSString stringWithFormat:@"%@",downloadModel.uniquenName];//存储硬盘上的的名字
+//                }else{
+//                    downloadModel.urlType = UrlHttp;
+//                    name = [NSString stringWithFormat:@"%@.mp4",downloadModel.uniquenName];//存储硬盘上的的名字
+//                }
+//
+//
+//                //头信息
+//                [self adddownHeader:downloadModel data:data];
+//
+//#pragma mark --- List 的下载
+//                if(data.listModel.m3u8.qqPlayArr.count > 0 && data.listModel.m3u8.url.length == 0){//list
+//                    downloadModel.urlArray = data.listModel.m3u8.qqPlayArr;
+//                    downloadModel.total_filesize = data.listModel.m3u8.total_filesize;
+//                }else{
+//                    downloadModel.downloadURL = data.listModel.m3u8.url;
+//                }
+//                //制作模型
+//                downloadModel.title = [downloadModel.title stringByReplacingOccurrencesOfString:@" " withString:@""];//替换空格
+//                downloadModel.fileName = name;
+//                [DatabaseTool updateRealUrl:downloadModel];//更新最新的下载地址
+//                [weakSelf resumeRealDownloadModel:downloadModel];
+//            }else{
+//                NSLog(@"没有下载地址");
+//                // 下载失败
+//                dispatch_async(dispatch_get_main_queue(), ^(){
+//                    downloadModel.state = RRDownloadStateFailed;
+//                    [self downloadModel:downloadModel didChangeState:RRDownloadStateFailed filePath:nil error:error];
+//                    [self willResumeNextWithDowloadModel:downloadModel];
+//                });
+//            }
+//        }];
     }
-}
-
--(void)adddownHeader:(TTDownloadModel *)downloadModel data:(urlDataModel *)data{
-    if (canUseObj(data.listModel.m3u8.header)) {
-        NSDictionary * dic = [self dictionaryWithJsonString:data.listModel.m3u8.header];
-        
-        if (dic) {
-            downloadModel.downHeader = dic;
-            
-            return;
-        }
-        
-        NSString * needreferer = data.listModel.m3u8.needreferer;
-        if (canUseObj(needreferer)&&needreferer.length >0) {
-            dic = @{@"Referer" : needreferer};
-            downloadModel.downHeader = dic;
-        }
-    }
-    
 }
 
 #pragma mark 字符串转json
@@ -418,7 +384,7 @@
                                                         options:NSJSONReadingMutableContainers
                                                           error:&err];
     if(err){
-        DLog(@"json解析失败：%@",err);
+        NSLog(@"json解析失败：%@",err);
         return nil;
     }
     return dic;
@@ -428,10 +394,10 @@
 {
 #pragma mark - 下载 3.0
     NSString *name  = downloadModel.fileName;
-    downloadModel.time = [DownLoadTools dateStr];
-    NSString *baseTargetPath = [DownLoadTools getCrTargetPath:@""];
+    downloadModel.time = [DownloadTool dateStr];
+    NSString *baseTargetPath = [DownloadTool getCrTargetPath:@""];
     downloadModel.filePath = [baseTargetPath stringByAppendingPathComponent:name];;
-    NSString *baseTempPath = [DownLoadTools getCrTempPath:@""];
+    NSString *baseTempPath = [DownloadTool getCrTempPath:@""];
     downloadModel.tempPath = [baseTempPath stringByAppendingPathComponent:name];
     
     // 如果task 不存在 或者 取消了
@@ -451,7 +417,7 @@
             for (NSString * key in keys) {
                 NSString * value = downloadModel.downHeader[key];
                 
-                DLog(@"--key:%@,value:%@",key,value);
+                NSLog(@"--key:%@,value:%@",key,value);
                 if (key.length && value.length) {
                     [request setValue:value forHTTPHeaderField:key];
                 }
@@ -461,7 +427,7 @@
         // 不使用缓存，避免断点续传出现问题
         [[NSURLCache sharedURLCache] removeCachedResponseForRequest:request];
         
-        DLog(@"---name:%@,episode:%d-sizeHadDown:%lld---",downloadModel.title,downloadModel.episode,[self fileSizeWithDownloadModel:downloadModel]);
+        NSLog(@"---name:%@,episode:%d-sizeHadDown:%lld---",downloadModel.title,downloadModel.episode,[self fileSizeWithDownloadModel:downloadModel]);
         // 设置请求头
         NSString *range = [NSString stringWithFormat:@"bytes=%zd-", [self fileSizeWithDownloadModel:downloadModel]];
         [request setValue:range forHTTPHeaderField:@"Range"];
@@ -478,7 +444,7 @@
     
 #pragma mark --- list的下载
     if (downloadModel.urlArray.count) {//list的下载
-        RRListDownloadManager *mgr = [RRListDownloadManager manager];
+        TTListDownloadManager *mgr = [TTListDownloadManager manager];
         mgr.delegate = self;
         downloadModel.state = RRDownloadStateRunning;
         [mgr praseList:downloadModel];
@@ -487,7 +453,7 @@
     }
     
     if (downloadModel.urlType == UrlM3u8){//m3u8下载开始
-        RRM3u8DownloadManager *mgr = [RRM3u8DownloadManager manager];
+        TTM3u8DownloadManager *mgr = [TTM3u8DownloadManager manager];
         mgr.delegate = self;
         downloadModel.state = RRDownloadStateRunning;
         [mgr praseUrl:downloadModel];
@@ -694,7 +660,7 @@
         [self.fileManager removeItemAtPath:downloadModel.filePath error:&error];
     }
     if (error) {
-        DLog(@"delete file error %@",error);
+        NSLog(@"delete file error %@",error);
     }
     
     [self removeDownLoadingModelForURLString:downloadModel.downloadURL];
@@ -704,7 +670,7 @@
         [DatabaseTool delFileModelWithUniquenName:downloadModel.uniquenName];
     }
     
-    DLog(@"-waitingDownloadModels-:%lu",(unsigned long)self.waitingDownloadModels.count);
+    NSLog(@"-waitingDownloadModels-:%lu",(unsigned long)self.waitingDownloadModels.count);
 }
 
 #pragma mark - public
@@ -752,7 +718,7 @@
 
 
 // 获取文件大小 -- 获取已缓存的文件大小，如果已经存在已缓存的文件，就追加，没有就从头开始下载
-- (long long)fileSizeWithDownloadModel:(RRDownloadModel *)downloadModel{
+- (long long)fileSizeWithDownloadModel:(TTDownloadModel *)downloadModel{
     NSString *filePath = downloadModel.tempPath;
     if (![self.fileManager fileExistsAtPath:filePath]) return 0;
     return [[self.fileManager attributesOfItemAtPath:filePath error:nil] fileSize];
@@ -773,8 +739,7 @@
 /**
  * 接收到响应
  */
-- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSHTTPURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
-{
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSHTTPURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
     
     RRDownloadModel *downloadModel = [self downLoadingModelForURLString:dataTask.taskDescription];
     if (!downloadModel) {
@@ -783,7 +748,7 @@
     
     NSString *codeStr = [NSString stringWithFormat:@"%ld",(long)response.statusCode];
     if (response.statusCode == 403 || response.statusCode == 424 || response.statusCode == 404 || [codeStr hasPrefix:@"4"] || [codeStr hasPrefix:@"5"]){
-        DLog(@"--response error 403--");
+        NSLog(@"--response error 403--");
         dispatch_async(dispatch_get_main_queue(), ^(){
             downloadModel.state = RRDownloadStateFailed;
             NSError *errr = [NSError errorWithDomain:NSURLErrorDomain code:-999 userInfo:@{NSURLErrorFailingURLStringErrorKey : @"请求地址失败403"}];
@@ -815,8 +780,7 @@
 /**
  * 接收到服务器返回的数据
  */
-- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
-{
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
     RRDownloadModel *downloadModel = [self downLoadingModelForURLString:dataTask.taskDescription];
     if (!downloadModel || downloadModel.state == RRDownloadStateSuspended) {
         return;
@@ -839,7 +803,7 @@
     
     //防止进度调用过多的保护措施
     if (self.timesCount ++ <= 30) return;
-    DLog(@"--http-%@-%d , progress: %f",downloadModel.title,downloadModel.episode,downloadModel.progress.progress);
+    NSLog(@"--http-%@-%d , progress: %f",downloadModel.title,downloadModel.episode,downloadModel.progress.progress);
     
     dispatch_async(dispatch_get_main_queue(), ^(){
         [self downloadModel:downloadModel updateProgress:downloadModel.progress];
@@ -851,10 +815,9 @@
 /**
  * 请求完毕（成功|失败）
  */
-- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
-{
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
     RRDownloadModel *downloadModel = [self downLoadingModelForURLString:task.taskDescription];
-    DLog(@"---下载失败/成功---name:%@,episode:%d,error:%@--",downloadModel.title,downloadModel.episode,error);
+    NSLog(@"---下载失败/成功---name:%@,episode:%d,error:%@--",downloadModel.title,downloadModel.episode,error);
     
     if (!downloadModel) {   return;  }
     
@@ -891,8 +854,7 @@
 
 #pragma mark -- 下载完成
 //下载完成后的一些处理方法
--(void)downloadcomplate:(TTDownloadModel *)downloadModel
-{
+-(void)downloadcomplate:(TTDownloadModel *)downloadModel {
     if(downloadModel.state == RRDownloadStateFailed){
         return;
     }
@@ -921,23 +883,22 @@
     });
 }
 
-- (void)moveFileAtURL:(NSString *)srcURL toPath:(NSString *)dstPath
-{
+- (void)moveFileAtURL:(NSString *)srcURL toPath:(NSString *)dstPath {
     if (!dstPath) {
-        DLog(@"error filePath is nil!");
+        NSLog(@"error filePath is nil!");
         return;
     }
     NSError *error = nil;
     if ([self.fileManager fileExistsAtPath:dstPath] ) {
         [self.fileManager removeItemAtPath:dstPath error:&error];
         if (error) {
-            DLog(@"removeItem error %@",error);
+            NSLog(@"removeItem error %@",error);
         }
     }
     
     [self.fileManager moveItemAtPath:srcURL toPath:dstPath error:&error];
     if (error){
-        DLog(@"moveItem error:%@",error);
+        NSLog(@"moveItem error:%@",error);
     }
 }
 
@@ -945,8 +906,7 @@
 #pragma mark -- m3u8的下载代理
 
 // 更新下载进度
-- (void)m3u8DownloadModel:(TTDownloadModel *)downloadModel didUpdateProgress:(TTDownloadProgress *)progress
-{
+- (void)m3u8DownloadModel:(TTDownloadModel *)downloadModel didUpdateProgress:(TTDownloadProgress *)progress {
     downloadModel.progress = progress;
     
     if (_delegate && [_delegate respondsToSelector:@selector(downloadModel:didUpdateProgress:)]) {
@@ -958,8 +918,7 @@
 }
 
 // 更新下载状态
-- (void)m3u8DownloadModel:(TTDownloadModel *)downloadModel didChangeState:(TTDownloadState)state filePath:(NSString *)filePath error:(NSError *)error
-{
+- (void)m3u8DownloadModel:(TTDownloadModel *)downloadModel didChangeState:(TTDownloadState)state filePath:(NSString *)filePath error:(NSError *)error {
     if (_delegate && [_delegate respondsToSelector:@selector(downloadModel:didChangeState:filePath:error:)]) {
         [_delegate downloadModel:downloadModel didChangeState:state filePath:filePath error:error];
     }
@@ -972,8 +931,7 @@
 }
 
 // 下载完毕
-- (void)m3u8DownloadDidCompleted:(TTDownloadModel *)downloadModel
-{
+- (void)m3u8DownloadDidCompleted:(TTDownloadModel *)downloadModel {
     [self.downloadAllModels removeObject:downloadModel];//下载完毕后，移除总数组，
     [self m3u8DownloadModel:downloadModel didUpdateProgress:downloadModel.progress];
     [self.downloadingModels removeObject:downloadModel];
@@ -984,20 +942,17 @@
 #pragma mark -- list的下载代理
 
 // 更新下载进度
-- (void)listDownloadModel:(TTDownloadModel *)downloadModel didUpdateProgress:(TTDownloadProgress *)progress
-{
+- (void)listDownloadModel:(TTDownloadModel *)downloadModel didUpdateProgress:(TTDownloadProgress *)progress {
     [self m3u8DownloadModel:downloadModel didUpdateProgress:progress];
 }
 
 // 更新下载状态
-- (void)listDownloadModel:(TTDownloadModel *)downloadModel didChangeState:(TTDownloadState)state filePath:(NSString *)filePath error:(NSError *)error
-{
+- (void)listDownloadModel:(TTDownloadModel *)downloadModel didChangeState:(RRDownloadState)state filePath:(NSString *)filePath error:(NSError *)error {
     [self m3u8DownloadModel:downloadModel didChangeState:state filePath:filePath error:error];
 }
 
 // 下载完毕
-- (void)listDownloadDidCompleted:(TTDownloadModel *)downloadModel
-{
+- (void)listDownloadDidCompleted:(TTDownloadModel *)downloadModel {
     [self m3u8DownloadDidCompleted:downloadModel];
 }
 @end

@@ -9,7 +9,7 @@
 
 
 // 下载状态
-typedef NS_ENUM(NSUInteger, TTDownloadState) {
+typedef NS_ENUM(NSUInteger, RRDownloadState) {
     RRDownloadStateNone,        // 未下载
     RRDownloadStateReadying,    // 等待下载
     RRDownloadStateRunning,     // 正在下载
@@ -38,8 +38,8 @@ typedef NS_ENUM(NSInteger,MovieType) {
 // 进度更新block
 typedef void (^TTDownloadProgressBlock)(TTDownloadProgress *progress);
 // 状态更新block
-typedef void (^TTDownloadStateBlock)(TTDownloadState state,NSString *filePath, NSError *error);
-typedef void (^TTDownloadUpdateBlock)(TTDownloadProgress *progress, TTDownloadState state,NSString *filePath, NSError *error);
+typedef void (^TTDownloadStateBlock)(RRDownloadState state,NSString *filePath, NSError *error);
+typedef void (^TTDownloadUpdateBlock)(TTDownloadProgress *progress, RRDownloadState state,NSString *filePath, NSError *error);
 
 
 #pragma mark -- TTDownloadModel
@@ -101,7 +101,7 @@ typedef void (^TTDownloadUpdateBlock)(TTDownloadProgress *progress, TTDownloadSt
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>  task info
 // 下载状态
-@property (nonatomic, assign) TTDownloadState state;
+@property (nonatomic, assign) RRDownloadState state;
 // 下载任务
 @property (nonatomic, strong) NSURLSessionTask *task;
 // 文件流

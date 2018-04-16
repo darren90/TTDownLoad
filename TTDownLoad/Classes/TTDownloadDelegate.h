@@ -16,7 +16,7 @@
 - (void)downloadModel:(TTDownloadModel *)downloadModel didUpdateProgress:(TTDownloadProgress *)progress;
 
 // 更新下载状态
-- (void)downloadModel:(TTDownloadModel *)downloadModel didChangeState:(TTDownloadState)state filePath:(NSString *)filePath error:(NSError *)error;
+- (void)downloadModel:(TTDownloadModel *)downloadModel didChangeState:(RRDownloadState)state filePath:(NSString *)filePath error:(NSError *)error;
 
 // 下载完毕
 - (void)downloadDidCompleted:(TTDownloadModel *)downloadModel;
